@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "802202577651",
+    "project_id": "todopoints2",
+    "storage_bucket": "todopoints2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802202577651:android:9c4c36dbed3d208db9a586",
+        "android_client_info": {
+          "package_name": "com.example.todopoints2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtPOFj_6bQIx0YMxoN0lUW1x01Wttp1LI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
