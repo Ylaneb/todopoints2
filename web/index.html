@@ -17,6 +17,17 @@
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
+
+  <!-- 1) Load gapi.client -->
+  <script src="https://apis.google.com/js/api.js" async defer></script>
+
+  <!-- 2) Load the new GSI client -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  
+  <!-- meta for the OAuth client ID -->
+  <meta name="google-signin-client_id"
+      content="802202577651-26sq3h4denssgkes67poft4u7l5l7h81.apps.googleusercontent.com" />
+
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
@@ -29,7 +40,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>todopoints2</title>
+  <title>ToDoPoints2</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
