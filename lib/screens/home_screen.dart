@@ -15,7 +15,7 @@ class AddOrLoginIntent extends Intent {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -121,12 +121,44 @@ class _HomeScreenState extends State<HomeScreen> {
       await _syncRemote();
       return;
     }
-    showModalBottomSheet(
-      context: ctx,
-      backgroundColor: Colors.black,
-      builder: (_) => AddTaskModal(onAdd: _addTask),
-    );
+    _showAddTaskFromTop();
+
   }
+
+  void _showAddTaskFromTop() {
+  showGeneralDialog(
+    context: context,
+    barrierLabel: "Add Task",
+    barrierDismissible: true,
+    transitionDuration: const Duration(milliseconds: 300),
+    pageBuilder: (_, __, ___) {
+      // Position the sheet near the top
+      return Align(
+        alignment: Alignment.topCenter,
+        child: Material(
+          color: Colors.black,
+          child: Container(
+            margin: const EdgeInsets.only(top: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            width: MediaQuery.of(context).size.width * 0.9,
+            child: AddTaskModal(onAdd: _addTask),
+          ),
+        ),
+      );
+    },
+    transitionBuilder: (_, anim, __, child) {
+      // Slide from -100% Y to 0%
+      return SlideTransition(
+        position: Tween<Offset>(
+          begin: const Offset(0, -1),
+          end: Offset.zero,
+        ).animate(anim),
+        child: child,
+      );
+    },
+  );
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -183,8 +215,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             floatingActionButton: FloatingActionButton(
-              child: Icon(user == null ? Icons.login : Icons.add),
               onPressed: _handleFab,
+              child: Icon(user == null ? Icons.login : Icons.add),
             ),
           ),
         ),

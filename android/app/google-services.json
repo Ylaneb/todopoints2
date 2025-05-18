@@ -12,7 +12,20 @@
           "package_name": "com.example.todopoints2"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "802202577651-9j6f5u1naelm6p3i3ni2g1ie6li87ua5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.todopoints2",
+            "certificate_hash": "1f1eeeaf4be29c8c27114269e827446aa7d2c96d"
+          }
+        },
+        {
+          "client_id": "802202577651-26sq3h4denssgkes67poft4u7l5l7h81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCtPOFj_6bQIx0YMxoN0lUW1x01Wttp1LI"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802202577651-26sq3h4denssgkes67poft4u7l5l7h81.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "802202577651-ncjc2dmlmkmlofh4dmnf2m1css2a6cs9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todopoints2"
+              }
+            }
+          ]
         }
       }
     }
